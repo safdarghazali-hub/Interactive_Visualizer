@@ -36,7 +36,7 @@ This project is licensed under the MIT License.
   
   <br><br>
   
-  <a href="upi://pay?pa=yourname@okaxis&pn=Your%20Name&cu=INR">
+  <a href="upi://pay?pa=safdarghazali@okhdfcbank&pn=Safdar%20Ghazali&cu=INR">
     <img src="https://img.shields.io/badge/Donate-GPay-blue?style=for-the-badge&logo=google-pay&logoColor=white" alt="GPay Button">
   </a>
 </div>
