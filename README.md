@@ -29,14 +29,16 @@ This project is licensed under the MIT License.
 <hr>
 
 <div align="center">
-  <h3>Support My Work ☕</h3>
-  <p>If you find this project helpful, consider supporting me via GPay / UPI</p>
-  
+  <h3>Support My Project ☕</h3>
+  <p>Scan the QR code or click the button to donate via GPay / UPI</p>
+
   <img src="assets/qrcode.png" width="200" alt="GPay QR Code">
   
   <br><br>
-  
+
   <a href="upi://pay?pa=safdarghazali@okhdfcbank&pn=Safdar%20Ghazali&cu=INR">
     <img src="https://img.shields.io/badge/Donate-GPay-blue?style=for-the-badge&logo=google-pay&logoColor=white" alt="GPay Button">
   </a>
+  
+  <p><i>Note: The button works on mobile devices with UPI apps installed.</i></p>
 </div>
