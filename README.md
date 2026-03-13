@@ -24,3 +24,11 @@ https://safdarghazali-hub.github.io/Interactive_Visualizer/
 
 ## 📜 License
 This project is licensed under the MIT License.
+
+## Support My Work ☕
+
+If you find this project helpful, you can support me via GPay:
+
+![GPay QR Code](assets/qrcode.png)
+
+*Scan the QR code above using any UPI app (GPay, PhonePe, Paytm)*
