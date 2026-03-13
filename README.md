@@ -34,11 +34,4 @@ This project is licensed under the MIT License.
 
   <img src="assets/qrcode.png" width="200" alt="GPay QR Code">
   
-  <br><br>
-
-  <a href="upi://pay?pa=safdarghazali@okhdfcbank&pn=Safdar%20Ghazali&cu=INR">
-    <img src="https://img.shields.io/badge/Donate-GPay-blue?style=for-the-badge&logo=google-pay&logoColor=white" alt="GPay Button">
-  </a>
-  
-  <p><i>Note: The button works on mobile devices with UPI apps installed.</i></p>
-</div>
+  <br>
