@@ -25,10 +25,18 @@ https://safdarghazali-hub.github.io/Interactive_Visualizer/
 ## 📜 License
 This project is licensed under the MIT License.
 
-## Support My Work ☕
+<br>
+<hr>
 
-If you find this project helpful, you can support me via GPay:
-
-![GPay QR Code](assets/qrcode.png)
-
-*Scan the QR code above using any UPI app (GPay, PhonePe, Paytm)*
+<div align="center">
+  <h3>Support My Work ☕</h3>
+  <p>If you find this project helpful, consider supporting me via GPay / UPI</p>
+  
+  <img src="assets/qrcode.png" width="200" alt="GPay QR Code">
+  
+  <br><br>
+  
+  <a href="upi://pay?pa=yourname@okaxis&pn=Your%20Name&cu=INR">
+    <img src="https://img.shields.io/badge/Donate-GPay-blue?style=for-the-badge&logo=google-pay&logoColor=white" alt="GPay Button">
+  </a>
+</div>
