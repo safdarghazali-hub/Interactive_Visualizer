@@ -13,7 +13,7 @@ Cyberpunk Aesthetic: The visual style is rooted in a "ghost-hybrid" aesthetic, u
 This Visualizer bridges the gap between the physical and the digital, turning the user into a conductor of light and geometry. It is a seamless blend of math, motion, and music, packaged into a high-performance web experience.
 
 ## 🚀 Live Demo
-[PASTE YOUR GITHUB PAGES LINK HERE]
+
 
 ## 🎮 How to Interact
 * **Pinch (Thumb & Index):** Scale the geometry.
