@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cyber-Dream: Ultimate Ghost Hybrid</title>
+    <title>Cyber-Dream: Interactive Visualizer</title>
     <style>
         body { margin: 0; overflow: hidden; background: #000; font-family: 'Segoe UI', sans-serif; }
         #canvas-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -145,9 +145,9 @@
                 void main() {
                     float dist = distance(gl_PointCoord, vec2(0.5));
                     if (dist > 0.5) discard;
-                    float shimmerEffect = sin(uTime * 20.0 * vShimmer) * uTreble;
+                    float shimmerEffect = sin(uTime * 5.0 * vShimmer) * uTreble;
                     float hue = fract(uTime * 0.05 + vPos.y * 0.01 + uBass * 0.05);
-                    vec3 color = hsv2rgb(vec3(hue, 0.8, 0.9 + shimmerEffect));
+                    vec3 color = hsv2rgb(vec3(hue, 0.8, clamp(0.9 + shimmerEffect, 0.0, 1.5)));
                     color = mix(color, vec3(1.0, 0.4, 0.1), uVortex);
                     color += (step(0.85, shimmerEffect) * uTreble * 0.4);
                     gl_FragColor = vec4(color, smoothstep(0.5, 0.1, dist));
@@ -160,7 +160,7 @@
         scene.add(points);
 
         // --- 3. SHAPE LIBRARY ---
-        const shapes = ['Black-Hole', 'Dream-Ring', 'Phyllo-Sphere', 'Nebula-Heart', 'Saturn', 'Flower', 'DNA-Helix', 'Cube', 'Galaxy'];
+        const shapes = ['Black-Hole', 'Dream-Ring', 'Torus-Knot', 'Mobius-Strip', 'Chaos-Attractor', 'Data-Disk', 'Phyllo-Sphere', 'Nebula-Heart', 'Saturn', 'Flower', 'DNA-Helix', 'Cube', 'Galaxy'];
         let currentShape = 0;
 
         function updateShape() {
@@ -184,7 +184,39 @@
                 } else if(name === 'Dream-Ring') {
                     const u = Math.random()*Math.PI*2, v = Math.random()*Math.PI*2, R = 24, rad = 8;
                     x = (R + rad * Math.cos(v)) * Math.cos(u); y = (R + rad * Math.cos(v)) * Math.sin(u); z = rad * Math.sin(v);
-                } else if(name === 'Phyllo-Sphere') {
+                } else if(name === 'Torus-Knot') {
+    const p = 3, q = 7; // Adjust these for different knot styles
+    const t = (i / particleCount) * Math.PI * 2 * 20; 
+    const r = 12 + 6 * Math.cos(q * t);
+    x = r * Math.cos(p * t);
+    y = r * Math.sin(p * t);
+    z = 6 * Math.sin(q * t);
+} else if(name === 'Mobius-Strip') {
+    const u = (i / particleCount) * Math.PI * 2;
+    const v = (Math.random() - 0.5) * 10; // Width of the strip
+    const a = 20; // Radius
+    x = (a + v * Math.cos(u / 2)) * Math.cos(u);
+    y = (a + v * Math.cos(u / 2)) * Math.sin(u);
+    z = v * Math.sin(u / 2);
+} else if(name === 'Chaos-Attractor') {
+    // We use a pseudo-integration for the particles
+    let lx = 0.1, ly = 0, lz = 0;
+    const dt = 0.01, sigma = 10, rho = 28, beta = 8/3;
+    // Note: For a real attractor, you'd iterate per-particle
+    // Simplified version for distribution:
+    const t = (i / particleCount) * 100;
+    x = 15 * Math.sin(t) * Math.cos(t * 0.5);
+    y = 15 * Math.cos(t * 1.2);
+    z = (Math.random() - 0.5) * 40;
+} else if(name === 'Data-Disk') {
+    const phi = (Math.sqrt(5) + 1) / 2; // Golden ratio
+    const r = Math.sqrt(i / particleCount) * 30;
+    const theta = 2 * Math.PI * phi * i;
+    x = Math.cos(theta) * r;
+    y = Math.sin(theta) * r;
+    z = (Math.random() - 0.5) * 2;
+}
+ else if(name === 'Phyllo-Sphere') {
                     const yPos = 1 - (i / (particleCount - 1)) * 2, radius = Math.sqrt(1 - yPos * yPos), theta = (Math.PI * (3 - Math.sqrt(5))) * i;
                     x = Math.cos(theta) * radius * 25; y = yPos * 25; z = Math.sin(theta) * radius * 25;
                 } else if(name === 'Nebula-Heart') {
