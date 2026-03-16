@@ -29,8 +29,8 @@ This project is licensed under the MIT License.
 <hr>
 
 <div align="center">
-  <h3>Support My Project ☕</h3>
-  <p>Scan the QR code or click the button to donate via GPay / UPI</p>
+  <h3>Buy me a Coffee ☕</h3>
+  <p>Scan the QR code</p>
 
   <img src="assets/qrcode.png" width="200" alt="GPay QR Code">
   
